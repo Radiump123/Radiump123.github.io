@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protocol: Titan Engine MVP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="wrap">
+  <canvas id="gameCanvas"></canvas>
+  <div id="hud">
+    <div class="box">SECTOR: <span id="waveTxt">1</span></div><br>
+    <div class="box">SCORE: <span id="scoreTxt">0</span></div>
+    
+    <div id="radar-container"><canvas id="radar-canvas" width="150" height="150"></canvas></div>
+
+    <div id="bottom-left">
+      <div style="font-size: 10px;">BIO-RECOVERY ACTIVE</div>
+      <div class="hp-bar"><div id="hp-fill"></div></div>
+    </div>
+
+    <div id="bottom-right">
+      <div id="weapon-label" style="font-size: 12px;">SIDEARM</div>
+      <div id="ammo-txt"><span id="mag">12</span> / <span id="res">48</span></div>
+    </div>
+  </div>
+
+  <div id="crosshair"></div>
+  <div id="overlay">
+    <h1 style="font-size: 40px; margin-bottom: 5px;">PROTOCOL</h1>
+    <p style="opacity: 0.5; margin-bottom: 25px;">WASD Move | Space Jump | C Crouch | Shift Sprint<br>Left-Click Shoot | Right-Click ADS | 1-2-3 Swap</p>
+    <button id="startBtn">INITIALIZE ENGINE</button>
+    <div id="loading-txt">SYSTEMS OFFLINE</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="src/engine.js"></script>
+</body>
+</html>
